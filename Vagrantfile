@@ -25,8 +25,11 @@ SCRIPT
 
 $install_mininet = <<SCRIPT
   apt-get update
-  git clone git://github.com/mininet/mininet
-  ./mininet/util/install.sh -a
+
+  if [ ! -d mininet ]; then
+    git clone git://github.com/mininet/mininet
+    ./mininet/util/install.sh -a
+  fi
 SCRIPT
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
