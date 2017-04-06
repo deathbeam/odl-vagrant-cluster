@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
     h.vm.provision "shell", privileged: false, inline: $prepare_home
     h.vm.provision "file", source: "./bin/odlCtrlStatus.sh", destination: "/home/ubuntu/bin/odlCtrlStatus.sh"
     h.vm.provision "file", source: "./bin/odlCtrlNetstat.sh", destination: "/home/ubuntu/bin/odlCtrlNetstat.sh"
-    h.vm.provision "file", source: "./bin/odlCtrlNetstat.sh", destination: "/home/ubuntu/bin/odlCtrlFindPid.sh"
+    h.vm.provision "file", source: "./bin/odlCtrlFindPid.sh.sh", destination: "/home/ubuntu/bin/odlCtrlFindPid.sh"
     h.vm.provision "shell", privileged: false, inline: $chmod_home
     h.vm.network "forwarded_port", guest: 6653, host: 6654, host_ip: "127.0.0.1"
   end
@@ -57,7 +57,7 @@ Vagrant.configure("2") do |config|
     h.vm.provision "shell", privileged: false, inline: $prepare_home
     h.vm.provision "file", source: "./bin/odlCtrlStatus.sh", destination: "/home/ubuntu/bin/odlCtrlStatus.sh"
     h.vm.provision "file", source: "./bin/odlCtrlNetstat.sh", destination: "/home/ubuntu/bin/odlCtrlNetstat.sh"
-    h.vm.provision "file", source: "./bin/odlCtrlNetstat.sh", destination: "/home/ubuntu/bin/odlCtrlFindPid.sh"
+    h.vm.provision "file", source: "./bin/odlCtrlFindPid.sh.sh", destination: "/home/ubuntu/bin/odlCtrlFindPid.sh"
     h.vm.provision "shell", privileged: false, inline: $chmod_home
     h.vm.network "forwarded_port", guest: 6653, host: 6655, host_ip: "127.0.0.1"
   end
@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
     h.vm.provision "shell", privileged: false, inline: $prepare_home
     h.vm.provision "file", source: "./bin/odlCtrlStatus.sh", destination: "/home/ubuntu/bin/odlCtrlStatus.sh"
     h.vm.provision "file", source: "./bin/odlCtrlNetstat.sh", destination: "/home/ubuntu/bin/odlCtrlNetstat.sh"
-    h.vm.provision "file", source: "./bin/odlCtrlNetstat.sh", destination: "/home/ubuntu/bin/odlCtrlFindPid.sh"
+    h.vm.provision "file", source: "./bin/odlCtrlFindPid.sh.sh", destination: "/home/ubuntu/bin/odlCtrlFindPid.sh"
     h.vm.provision "shell", privileged: false, inline: $chmod_home
     h.vm.network "forwarded_port", guest: 6653, host: 6656, host_ip: "127.0.0.1"
   end
