@@ -80,11 +80,11 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "mininet" do | h |
     h.vm.host_name = "mininet"
-    h.vm.network :private_network, ip: "10.0.42.222", virtualbox__intnet: true
+    h.vm.network :private_network, ip: "10.0.42.222"
     h.vm.provision "shell", inline: $set_password
     h.vm.provision "shell", inline: $install_mininet
   end
- 
+
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
